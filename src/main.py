@@ -5,9 +5,12 @@ def main():
     win = Window(800, 600)
 
     cell1 = Cell(win)
+    cell2 = Cell(win)
 
-    cell1.has_top_wall = False
     cell1.draw(50, 50, 100, 100)
+    cell2.draw(125, 125, 200, 200)
+
+    cell1.draw_move(cell2, True)
 
     win.wait_for_close()
 
