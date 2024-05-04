@@ -12,13 +12,6 @@ class Window:
     def draw_line(self, line, fill_color):
         line.draw(self.__canvas, fill_color)
 
-    # def draw_circle(self, x, y, radius, fill_color):
-    #     x0 = x - radius
-    #     y0 = y - radius
-    #     x1 = x + radius
-    #     y1 = y + radius
-    #     self.__canvas.create_oval(x0, y0, x1, y1, fill=fill_color)
-
     def redraw(self):
         self.__root.update_idletasks()
         self.__root.update()

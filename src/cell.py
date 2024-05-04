@@ -11,6 +11,7 @@ class Cell:
         self._x2 = None
         self._y2 = None
         self._win = win
+        self.visited = False
 
     def get_midpoint(self):
         mid_x = (self._x1 + self._x2) / 2
