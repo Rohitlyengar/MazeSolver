@@ -2,11 +2,17 @@ from graphics import (Window, Point, Line)
 from maze import Maze
 
 def main():
+
+    rows = int(input("Enter the Number of Rows: "))
+    cols = int(input("Enter the Number of Columns: "))
+
     win = Window(800, 600)
+    maze = Maze(50, 50, rows, cols, 50, 50, win)
 
-    m1 = Maze(50, 50, 10, 10, 50, 50, win)
-
-    m1._break_walls_r(0, 0)
+    if maze.solve():
+        print("Maze solved!")
+    else:
+        print("Maze can not be solved!")
 
     win.wait_for_close()
 
